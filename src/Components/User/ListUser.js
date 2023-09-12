@@ -103,6 +103,8 @@ export const ListUser = () => {
         try {
             if (formValue.valueUsername === '') {
                 Alertwarning('Please import Username')
+                setEffect({ ...effect, onLoad: false })
+                return
             }
             const pr = {
                 username: formValue.valueUsername,
